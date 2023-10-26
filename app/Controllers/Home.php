@@ -9,7 +9,7 @@ class Home extends BaseController
         return view('welcome_message');
     }
 
-    public function testme(): string
+    public function testme()
     {
         echo "Test ok";
     }
