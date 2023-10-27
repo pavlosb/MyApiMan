@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('testme', 'Home::testme');
+$routes->get('autoapi', 'Auto::index');
