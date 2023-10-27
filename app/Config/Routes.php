@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('testme', 'Home::testme');
 $routes->get('autoapi', 'Autoapi::index');
+$routes->get('more', 'Autoapi::more');
