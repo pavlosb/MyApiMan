@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Autoapi extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         $client = \Config\Services::curlrequest();
         $headerData = array(
