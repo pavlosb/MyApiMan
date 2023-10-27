@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Auto extends BaseController
+class Autoapi extends BaseController
 {
     public function index(): string
     {
