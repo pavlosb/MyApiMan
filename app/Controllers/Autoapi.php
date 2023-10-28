@@ -19,7 +19,7 @@ class Autoapi extends BaseController
         $apiURL = 'https://webservices19.autotask.net/atservicesrest/v1.0/Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
         $response = $client->get($apiURL,[
             'debug' => true,
-            'headers'=>$headerData
+            'headers'=>$headerData,
         ]);
 
     // Read response
