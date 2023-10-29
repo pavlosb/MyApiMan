@@ -5,15 +5,16 @@ namespace App\Controllers;
 class Autoapi extends BaseController
 {
     private $apiloc = 'https://webservices19.autotask.net/atservicesrest/v1.0/';
-    private $apiuser = 'XXXXXXXXXXXXXXXXXXXXXXXXX';
-    private $apipass = 'XXXXXXXXXXXXXXXXXXXXXXXXX';
+    private $apiic = '5IXBPE3XZTKWTF4562735DXFAAA';
+    private $apiuser = 'dsehfrek2bzrqfw@inline.gr';
+    private $apipass = 'M#z7c3$ZP*t0dW4@N~x69E@wn';
     public function index()
     {
         $client = \Config\Services::curlrequest();
         $headerData = array(
-            'ApiIntegrationCode' => '5IXBPE3XZTKWTF4562735DXFAAA',
-            'UserName' => 'dsehfrek2bzrqfw@inline.gr',
-            'Secret'   => 'M#z7c3$ZP*t0dW4@N~x69E@wn',
+            'ApiIntegrationCode' => $this->$apiic,
+            'UserName' => $this->$apiuser,
+            'Secret'   => $this->$apipass,
             'Connection' => 'Keep-Alive',
             'Accept-Encoding' => 'gzip, deflate, br',
             'Content-Type' => 'application/json',
