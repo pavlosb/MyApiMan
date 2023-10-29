@@ -20,7 +20,9 @@ class Autoapi extends BaseController
     }
     public function index()
     {
-        $client = \Config\Services::curlrequest();
+        echo $this->apiic;
+        
+        //$client = \Config\Services::curlrequest();
         $headerData = array(
             'ApiIntegrationCode' => $this->apiic,
             'UserName' => $this->apiuser,
@@ -31,10 +33,10 @@ class Autoapi extends BaseController
         );
 
         $apiURL = 'https://webservices19.autotask.net/atservicesrest/v1.0/Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
-        $response = $client->get($apiURL,[
-            'debug' => true,
-            'headers'=>$headerData,
-        ]);
+        //$response = $client->get($apiURL,[
+       //     'debug' => true,
+       //     'headers'=>$headerData,
+       // ]);
 
     // Read response
     $code = $response->getStatusCode();
