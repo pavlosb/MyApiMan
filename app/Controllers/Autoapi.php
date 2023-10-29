@@ -4,11 +4,19 @@ namespace App\Controllers;
 
 class Autoapi extends BaseController
 {
-    private $apiuri = 'https://webservices19.autotask.net/atservicesrest/v1.0/';
-    private $apiic = '5IXBPE3XZTKWTF4562735DXFAAA';
-    private $apiuser = 'dsehfrek2bzrqfw@inline.gr';
-    private $apipass = 'M#z7c3$ZP*t0dW4@N~x69E@wn';
-    
+    private $apiuri;
+    private $apiic;
+    private $apiuser;
+    private $apipass;
+
+    public function __construct()
+    {
+        $this->apiic = '5IXBPE3XZTKWTF4562735DXFAAA';
+        $this->apiuri = 'https://webservices19.autotask.net/atservicesrest/v1.0/';
+        $this->apiuser = 'dsehfrek2bzrqfw@inline.gr';
+        $this->apipass = 'M#z7c3$ZP*t0dW4@N~x69E@wn';
+
+    }
     public function index()
     {
         $client = \Config\Services::curlrequest([
