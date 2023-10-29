@@ -32,7 +32,7 @@ class Autoapi extends BaseController
             'Content-Type' => 'application/json',
         );
 
-        $apiURL = 'https://webservices19.autotask.net/atservicesrest/v1.0/Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
+        $apiURL = 'Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
         $response = $client->get($apiURL,[
             'debug' => true,
             'headers'=>$headerData,
