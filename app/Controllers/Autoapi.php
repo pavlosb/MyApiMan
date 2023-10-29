@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 class Autoapi extends BaseController
 {
-    private $apiuri;
-    private $apiic;
-    private $apiuser;
-    private $apipass;
+    protected $apiuri;
+    protected $apiic;
+    protected $apiuser;
+    protected $apipass;
 
     public function __construct()
     {
