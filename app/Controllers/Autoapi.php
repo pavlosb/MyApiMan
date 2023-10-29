@@ -11,6 +11,7 @@ class Autoapi extends BaseController
 
     public function __construct()
     {
+        parent::__construct();
         $this->apiic = '5IXBPE3XZTKWTF4562735DXFAAA';
         $this->apiuri = 'https://webservices19.autotask.net/atservicesrest/v1.0/';
         $this->apiuser = 'dsehfrek2bzrqfw@inline.gr';
@@ -20,7 +21,7 @@ class Autoapi extends BaseController
     public function index()
     {
         $client = \Config\Services::curlrequest([
-            'baseURI' =>  $this->$apiuri,
+            'baseURI' =>  $this->apiuri,
         ]);
         $headerData = array(
             'ApiIntegrationCode' => $this->apiic,
