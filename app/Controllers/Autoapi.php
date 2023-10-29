@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class Autoapi extends BaseController
 {
+    private $apiloc = 'https://webservices19.autotask.net/atservicesrest/v1.0/';
+    private $apiuser = 'XXXXXXXXXXXXXXXXXXXXXXXXX';
+    private $apipass = 'XXXXXXXXXXXXXXXXXXXXXXXXX';
     public function index()
     {
         $client = \Config\Services::curlrequest();
