@@ -12,7 +12,7 @@ class Autoapi extends BaseController
         
          
         $client = \Config\Services::curlrequest([
-            'baseURI' => 'https://webservices19.autotask.net/atservicesrest/v1.0/',
+            'baseURI' => 'https://webservices19.autotask.net/atservicesrest/v1.0/'
         ]);
         $headerData = array(
             'ApiIntegrationCode' => '5IXBPE3XZTKWTF4562735DXFAAA',
@@ -24,7 +24,7 @@ class Autoapi extends BaseController
         );
 
         $apiURL = 'Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
-      $response = $client->get($apiURL,[
+      $response = $client->request('get', $apiURL, [
            'debug' => true,
            'headers'=>$headerData,
        ]);
