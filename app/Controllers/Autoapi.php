@@ -5,7 +5,7 @@ namespace App\Controllers;
 class Autoapi extends BaseController
 {
 
-protected $testvar;
+    var $testvar;
         function __construct(){
         parent::__construct(); // needed when adding a constructor to a controller
         $this->testvar = "my test var";
@@ -15,7 +15,7 @@ protected $testvar;
     {
         
         echo $this->testvar;
-        
+
         $client = \Config\Services::curlrequest([
             'baseURI' => 'https://webservices19.autotask.net/atservicesrest/v1.0/'
         ]);
