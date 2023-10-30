@@ -13,7 +13,7 @@ class Autoapi extends BaseController
     
     public function index()
     {
-        
+        echo getenv("MYSET");
         echo $this->testvar;
 
         $client = \Config\Services::curlrequest([
