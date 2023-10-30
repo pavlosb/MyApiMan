@@ -1,3 +1,4 @@
+5
 <?php
 
 namespace App\Controllers;
@@ -9,7 +10,10 @@ class Autoapi extends BaseController
     {
         
         
-        $client = \Config\Services::curlrequest();
+         
+        $client = \Config\Services::curlrequest([
+            'baseURI' => 'https://webservices19.autotask.net/atservicesrest/v1.0/',
+        ]);
         $headerData = array(
             'ApiIntegrationCode' => '5IXBPE3XZTKWTF4562735DXFAAA',
             'UserName' => 'dsehfrek2bzrqfw@inline.gr',
@@ -19,7 +23,7 @@ class Autoapi extends BaseController
             'Content-Type' => 'application/json',
         );
 
-        $apiURL = 'https://webservices19.autotask.net/atservicesrest/v1.0/Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
+        $apiURL = 'Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
       $response = $client->get($apiURL,[
            'debug' => true,
            'headers'=>$headerData,
