@@ -13,12 +13,12 @@ class Autoapi extends BaseController
         
 
         $client = \Config\Services::curlrequest([
-            'baseURI' => 'https://webservices19.autotask.net/atservicesrest/v1.0/'
+            'baseURI' => getenv("ATASK_URI")
         ]);
         $headerData = array(
-            'ApiIntegrationCode' => '5IXBPE3XZTKWTF4562735DXFAAA',
-            'UserName' => 'dsehfrek2bzrqfw@inline.gr',
-            'Secret'   => 'M#z7c3$ZP*t0dW4@N~x69E@wn',
+            'ApiIntegrationCode' => getenv("ATASK_AIC"),
+            'UserName' => getenv("ATASK_USER"),
+            'Secret'   => getenv("ATASK_SECRET"),
             'Connection' => 'Keep-Alive',
             'Accept-Encoding' => 'gzip, deflate, br',
             'Content-Type' => 'application/json',
