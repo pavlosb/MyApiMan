@@ -23,8 +23,8 @@ class Autoapi extends BaseController
             'Content-Type' => 'application/json',
         );
 
-        $apiURL = 'Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
-      $response = $client->request('get', $apiURL, [
+        $requrl = 'Companies/query?search={"filter":[{"op":"in","field":"CompanyType","value":[1,3,7]}]}';
+      $response = $client->request('get', $requrl, [
            'debug' => true,
            'headers'=>$headerData,
        ]);
